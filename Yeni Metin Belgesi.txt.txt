@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>KURTSKOR</title>
+</head>
+<body>
+
+  <h1>KÜRTSKOR</h1>
+
+  <p>Skor tahmin uygulaması</p>
+
+  <button onclick="skorGoster()">
+    Skor Tahmini Göster
+  </button>
+
+  <p id="sonuc"></p>
+
+  <script>
+    function skorGoster() {
+      document.getElementById("sonuc").innerText = "Tahmin edilen skor: 2 - 1";
+    }
+  </script>
+
+</body>
+</html>
