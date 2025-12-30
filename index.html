@@ -10,11 +10,12 @@
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
-
-      /* SAYFAYI DİKEY FLEX YAPIYORUZ */
       min-height: 100vh;
+      margin: 0;
+
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
 
     h1 {
@@ -25,11 +26,12 @@
     button {
       background-color: #fca311;
       border: none;
-      padding: 14px 35px;
+      padding: 14px 40px;
       font-size: 20px;
       border-radius: 10px;
       cursor: pointer;
       margin-top: 30px;
+      width: auto;          /* BUTON ARTIK UZAMAZ */
     }
 
     #skor {
@@ -39,15 +41,15 @@
       color: #ffd166;
     }
 
-    /* GÖRSELİ SAYFANIN EN ALTINA SABİTLİYOR */
+    /* GÖRSEL */
     .logo {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
       margin-top: auto;
-      margin-bottom: 30px;
-      align-self: center;
+      margin-bottom: 25px;
+      display: block;
     }
   </style>
 </head>
@@ -56,14 +58,12 @@
 
   <h1>⚽ Futbol Skorları</h1>
 
-  <button onclick="gosterSkor()">
-    Maçı Göster
-  </button>
+  <button onclick="gosterSkor()">Maçı Göster</button>
 
   <p id="skor"></p>
 
-  <!-- GÖRSEL EN AŞAĞIDA -->
-  <img src="ses.png" class="logo" alt="Takım Logosu">
+  <!-- GÖRSEL EN ALTTA -->
+  <img src="ses.png" class="logo">
 
   <script>
     function gosterSkor() {
