@@ -13,10 +13,6 @@
       padding-top: 50px;
     }
 
-    h1 {
-      color: #5bc0be;
-    }
-
     button {
       background-color: #fca311;
       border: none;
@@ -24,11 +20,6 @@
       font-size: 18px;
       border-radius: 6px;
       cursor: pointer;
-      margin-top: 20px;
-    }
-
-    button:hover {
-      background-color: #e69500;
     }
 
     #skor {
@@ -44,14 +35,21 @@
 
   <h1>⚽ Futbol Skorları</h1>
 
-  <button onclick="goster()">Maçı Göster</button>
+  <button onclick="goster()">
+    Maçı Göster
+  </button>
 
   <p id="skor"></p>
 
   <script>
     function goster() {
-      document.getElementById("skor").innerHTML =
-      "KÜRTSPOR 2 - 1 KÜRTOLMAYANSPOR";
+      const skor = document.getElementById("skor");
+
+      if (skor.innerText === "") {
+        skor.innerText = "KÜRTSPOR 2 - 1 KÜRTOLMAYANSPOR";
+      } else {
+        skor.innerText = "";
+      }
     }
   </script>
 
